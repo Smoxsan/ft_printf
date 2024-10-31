@@ -6,12 +6,12 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:57 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/31 16:29:43 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/31 17:09:52 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-char *ft_printf_s(char *s)
+char	*ft_printf_s(char *s)
 {
 	while(*s)
 	{

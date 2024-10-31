@@ -6,12 +6,12 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:31 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/31 16:29:10 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/10/31 17:10:15 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-char ft_printf_c(char c)
+char	ft_printf_c(char c)
 {
 	write(1, &c, 1);
 }
