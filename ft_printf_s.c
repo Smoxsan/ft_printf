@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:57 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/31 17:09:52 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/01 03:25:12 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 char	*ft_printf_s(char *s)
 {
 	while(*s)

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:37:28 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/31 14:55:29 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/01 03:24:49 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 int	ft_printf_d(int n)
 {
 	if (n == -2147483648)
@@ -29,7 +30,7 @@ int	ft_printf_d(int n)
 		ft_printf_d(n / 10);
 	}
 	ft_printf_c((n % 10) + '0');
-	return(0);
+	return (0);
 }
 
 // int main(void)

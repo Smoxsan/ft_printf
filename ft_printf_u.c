@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
+/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:02 by fkonig            #+#    #+#             */
-/*   Updated: 2024/10/31 16:10:22 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/01 03:25:23 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
 unsigned int	ft_printf_u(unsigned int n)
 {
 	if (n >= 10)
@@ -18,7 +19,7 @@ unsigned int	ft_printf_u(unsigned int n)
 		ft_printf_u(n / 10);
 	}
 	ft_printf_c((n % 10) + '0');
-	return(0);
+	return (0);
 }
 
 // int main(void)
