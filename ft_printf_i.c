@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:46 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/01 12:44:24 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/01 18:11:06 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ int	ft_printf_i(int n)
 	write(1, "\n", 1);
 }
 
-// int main(void)
+//int main(void)
 // {
 //     // Test cases for ft_printf_d
 //     ft_printf_i(0);                       // Expected output: 0
-//     ft_printf_c('\n');                    // New line
+//     ft_printf_c('k');                    // New line
 
 //     ft_printf_i(42);                      // Expected output: 42
 //     ft_printf_c('\n');                    // New line
