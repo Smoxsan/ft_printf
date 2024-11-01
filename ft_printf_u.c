@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:02 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/01 03:25:23 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/01 12:43:23 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ unsigned int	ft_printf_u(unsigned int n)
 		ft_printf_u(n / 10);
 	}
 	ft_printf_c((n % 10) + '0');
+	write(1, "\n", 1);
 	return (0);
 }
 
