@@ -6,12 +6,14 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/04 10:59:08 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/05 11:32:24 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_printf_per(const char *a)
+#include "ft_printf.h"
+
+void	ft_printf_per(void)
 {
-	write(1, '%', 1);
+	write(1, "%", 1);
 	write(1, "\n", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:14 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/04 10:59:49 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/05 11:35:55 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,14 @@
 #include <stdarg.h>
 # define FT_PRINTF_H
 
-int	ft_printf_d(int n);
-int	ft_printf_i(int n);
-unsigned int	ft_printf_u(unsigned int n);
-char	ft_printf_c(char c);
+void	ft_printf_c(char c);
 char	*ft_printf_s(char *s);
 void	*ft_printf_p(void *c);
-char	ft_printf_per(const char *a);
-int	ft_printf_d(int n);
+void	ft_printf_per(void);
+void	ft_printf_d(int n);
 void	ft_printf_hexlower(unsigned long c);
 void	ft_printf_hexupper(unsigned long c);
-int	ft_printf_i(int n);
-unsigned int	ft_printf_u(unsigned int n);
+void	ft_printf_i(int n);
+void	ft_printf(const char *a, ...);
+int	ft_printf_u(unsigned int n);
 #endif

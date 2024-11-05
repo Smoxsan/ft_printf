@@ -6,13 +6,13 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:37:28 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/01 12:44:15 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/05 11:32:14 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_d(int n)
+void	ft_printf_d(int n)
 {
 	if (n == -2147483648)
 	{
@@ -31,7 +31,6 @@ int	ft_printf_d(int n)
 	}
 	ft_printf_c((n % 10) + '0');
 	write(1, "\n", 1);
-	return (0);
 }
 
 // int main(void)

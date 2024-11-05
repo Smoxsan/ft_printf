@@ -6,13 +6,13 @@
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:02 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/01 12:43:23 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/05 11:32:39 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-unsigned int	ft_printf_u(unsigned int n)
+int	ft_printf_u(unsigned int n)
 {
 	if (n >= 10)
 	{

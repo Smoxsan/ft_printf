@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:06 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/04 11:04:50 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/05 11:34:07 by smox             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 void	ft_printf(const char *a, ...)
 {
-	va_list args;
+	va_list	args;
+
 	va_start(args, a);
 	while (a++)
 	{
@@ -34,7 +35,7 @@ void	ft_printf(const char *a, ...)
 				int d = va_arg(args, int);
 				ft_printf_d(d);}
 			else if (*a == '%')
-				ft_printf_per(a);
+				ft_printf_per();
 			else if (*a == 'u'){
 				unsigned int u = va_arg(args, unsigned int);
 				ft_printf_u(u);}
