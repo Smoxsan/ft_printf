@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_u.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: smox <smox@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:02 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/05 11:32:39 by smox             ###   ########.fr       */
+/*   Updated: 2024/11/07 12:51:26 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_printf_u(unsigned int n)
 		ft_printf_u(n / 10);
 	}
 	ft_printf_c((n % 10) + '0');
-	write(1, "\n", 1);
 	return (0);
 }
 
