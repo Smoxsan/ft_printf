@@ -6,13 +6,14 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/07 12:51:09 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/11 17:17:18 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_per(void)
+int	ft_printf_per(int *count)
 {
-	write(1, "%", 1);
+	ft_printf_c('%', count);
+	return(0);
 }

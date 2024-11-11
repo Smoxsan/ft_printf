@@ -6,19 +6,19 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:02 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/07 12:51:26 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:47:58 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_u(unsigned int n)
+int	ft_printf_u(unsigned int n, int *count)
 {
 	if (n >= 10)
 	{
-		ft_printf_u(n / 10);
+		ft_printf_u(n / 10, count); 
 	}
-	ft_printf_c((n % 10) + '0');
+	ft_printf_c((n % 10) + '0', count);
 	return (0);
 }
 

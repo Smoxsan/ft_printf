@@ -6,15 +6,18 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:31 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/07 13:17:08 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/11 16:53:03 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_printf_c(char c)
+int	ft_printf_c(char c, int *count)
 {
-	write(1, &c, 1);
+	if (*count == -1)
+		return(-1);
+	*count = write(1, &c, 1);
+	return(0);
 }
 
 //int main()
