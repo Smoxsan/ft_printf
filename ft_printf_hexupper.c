@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:39 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/14 14:00:53 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/14 18:51:35 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ int ft_printf_hexupper(unsigned long c, int *count)
         hex_return[hex_length--] = hex_digits[c % 16];
         c /= 16;
     }
-    write(1, "0X", 2);
-    *count += 2;
     hex_length = 0;
     while (hex_return[hex_length] != '\0') {
         ft_printf_c(hex_return[hex_length], count);

@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:06 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/14 15:50:49 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/14 19:30:20 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,92 +58,3 @@ int	ft_printf(const char *a, ...)
 	va_end(args);
 	return (count);
 }
-
-#include <stdio.h>
-#include <limits.h>
-#include "ft_printf.h"
-
-// int main()
-// {
-// 	int printed_chars = 0;
-    
-// 	printed_chars = ft_printf("Character: %c\n", 'A');          // Standard character test
-// 	printf("ft_printf printed %d characters.\n", printed_chars);
-//     printed_chars = ft_printf("Character: %c\n", '\0');         // Null character
-// 	printf("ft_printf printed %d characters.\n", printed_chars);
-
-//     // Test string
-//     printed_chars = ft_printf("String: %s\n", "Hello, world!");
-// 	printf("ft_printf printed %d characters.\n", printed_chars); // Normal string
-//     printed_chars = ft_printf("String: %s\n", "");              
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Empty string
-//     printed_chars = ft_printf("String: %s\n", NULL);            
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// NULL string (may cause crash if not handled)
-
-//     // Test pointer (address)
-//     int *ptr = NULL;
-//     printed_chars = ft_printf("Pointer: %p\n", ptr);            
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// NULL pointer
-//     int num = 42;
-//     ptr = &num;
-//     printed_chars = ft_printf("Pointer: %p\n", ptr);            
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Non-NULL pointer
-    
-//     // Test integer
-//     printed_chars = ft_printf("Integer: %d\n", -123);        
-// 	printf("ft_printf printed %d characters.\n", printed_chars);   // Negative integer
-//     printed_chars = ft_printf("Integer: %d\n", 0);              
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Zero
-//     printed_chars = ft_printf("Integer: %d\n", 123);            
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Positive integer
-//     printed_chars = ft_printf("Integer: %d\n", INT_MAX);        
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Edge case (max int value)
-//     printed_chars = ft_printf("Integer: %d\n", INT_MIN);        
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Edge case (min int value)
-
-//     // Test unsigned integer
-//     printed_chars = ft_printf("Unsigned integer: %u\n", 12345); 
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Standard unsigned integer
-//     printed_chars = ft_printf("Unsigned integer: %u\n", 0);     
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Zero
-//     printed_chars = ft_printf("Unsigned integer: %u\n", UINT_MAX);
-// 	printf("ft_printf printed %d characters.\n", printed_chars); // Edge case (max unsigned int)
-
-    // // Test hexadecimal (lowercase)
-    // printed_chars = ft_printf("%x\n", 255);
-	// printf("%x\n", 255);
-	// printf("ft_printf printed %d characters.\n", printed_chars); // Standard hex
-    // printed_chars = ft_printf("%x\n", 0); 
-	// printf("%x\n", 0); 
-	// printf("ft_printf printed %d characters.\n", printed_chars); // Zero
-    // printed_chars = ft_printf("%x\n", UINT_MAX);
-	// ft_printf("%x\n", UINT_MAX);
-	// printf("ft_printf printed %d characters.\n", printed_chars); // Edge case (max unsigned int)
-	//     // Test hexadecimal (uppercase)
-    // ft_printf("Hexadecimal (upper): %X\n", 255);
-	// printf("ft_printf printed %d characters.\n", printed_chars); // Standard hex (uppercase)
-    // ft_printf("Hexadecimal (upper): %X\n", 0); 
-	// printf("ft_printf printed %d characters.\n", printed_chars);  // Zero
-    // ft_printf("Hexadecimal (upper): %X\n", UINT_MAX);
-	// printf("ft_printf printed %d characters.\n", printed_chars); // Edge case (max unsigned int)
-    // // Test percentage sign
-    // printed_chars = ft_printf("Percentage: %%\n");              
-	// printf("ft_printf printed %d characters.\n", printed_chars);// Printing just the '%' character
-    
-//     // Test with mixed format specifiers
-//     printed_chars = ft_printf("Mixed format: %d, %s, %x, %u\n", -123, "Hello", 255, 12345);
-// 	printf("ft_printf printed %d characters.\n", printed_chars);
-    
-//     // Test edge case with very large numbers
-//     printed_chars = ft_printf("Large unsigned number: %u\n", 4294967295); // Max unsigned 32-bit number
-// 	printf("ft_printf printed %d characters.\n", printed_chars);
-//     printed_chars = ft_printf("Large hexadecimal (lower): %x\n", 4294967295); // Max unsigned 32-bit number in hex (lowercase)
-// 	printf("ft_printf printed %d characters.\n", printed_chars);
-//     printed_chars = ft_printf("Large hexadecimal (upper): %X\n", 4294967295); 
-// 	printf("ft_printf printed %d characters.\n", printed_chars);// Max unsigned 32-bit number in hex (uppercase)
-
-//     // Test invalid format specifier
-//     ft_printf("Invalid specifier: %z\n");        // Invalid format specifier (e.g. '%z')
-
-//     return (0);
-// }

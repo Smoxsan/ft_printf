@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:57 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/13 16:17:53 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/14 19:20:00 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int 	ft_printf_s(char *s, int *count)
 	int rar;
 	char *nah;
 
-	nah = "(NULL)";
+	nah = "(null)";
 	rar = 0;
 	if(s == NULL)
 	{
