@@ -6,30 +6,99 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:39 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/12 12:06:21 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/14 14:00:53 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf_hexupper(unsigned long c, int *count)
+static void	*ft_calloc(size_t num_elements, size_t element_size)
 {
-	char	*hex_digits;
-	char	hex[16];
-	int	i;
+	char	*ptr;
+	size_t	size;
+	size_t	i;
 
-	i = 15;
-	hex_digits = "0123456789ABCDEF";
-	while (c > 0)
+	size = num_elements * element_size;
+	ptr = malloc(size);
+	if (ptr == NULL)
+		return (NULL);
+	i = 0;
+	while (i < size)
 	{
-		hex[i--] = hex_digits[c % 16];
-		c /= 16;
+		((char *)ptr)[i] = 0;
+		i++;
 	}
-	*count = 2;
-	write(1, "0x", 2);
-	while (i >= 0)
-		hex[i--] = '0';
-	*count = *count + 16;
-	write(1, hex, 16);
-	return(*count);
+	return (ptr);
 }
+static int hexlen(unsigned long c)
+{
+	int hex_len;
+
+	hex_len = 0;
+	if(c == 0)
+	{
+		hex_len = 1;
+	}
+	else
+	{
+		while(c > 0)
+		{
+			
+			c /= 16;
+			hex_len++;
+		}
+	}
+	return(hex_len);
+}
+int ft_printf_hexupper(unsigned long c, int *count)
+{
+    char *hex_digits;
+    int hex_length;
+    char *hex_return;
+
+	hex_length = hexlen(c);
+	hex_return = ft_calloc(hex_length + 1, sizeof(char));
+	hex_digits = "0123456789ABCDEF";
+	hex_length = hex_length - 1;
+    if (hex_return == NULL)
+        return *count;
+    if (c == 0)
+        hex_return[0] = '0';
+    while (c > 0)
+	{
+        hex_return[hex_length--] = hex_digits[c % 16];
+        c /= 16;
+    }
+    write(1, "0X", 2);
+    *count += 2;
+    hex_length = 0;
+    while (hex_return[hex_length] != '\0') {
+        ft_printf_c(hex_return[hex_length], count);
+        hex_length++;
+    }
+    free(hex_return);
+    return *count;
+}
+
+// int	ft_printf_hexupper(unsigned long c, int *count)
+// {
+// 	char	*hex_digits;
+// 	char	hex[16];
+// 	int	i;
+
+
+// 	i = 15;
+// 	*count += 2;
+// 	write(1, "0x", 2);
+// 	hex_digits = "0123456789ABCDEF";
+// 	while (c > 0)
+// 	{
+// 		hex[i--] = hex_digits[c % 16];
+// 		c /= 16;
+// 	}
+// 	while (i >= 0)
+// 		hex[i--] = '0';
+// 	*count += 16;
+// 	write(1, hex, 16);
+// 	return(*count);
+// }
