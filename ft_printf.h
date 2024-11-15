@@ -6,15 +6,15 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:30:14 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/11 16:52:47 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/15 09:56:06 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # include <stdlib.h>
 # include <unistd.h>
-#include <stdarg.h>
-#include <stdio.h>
+# include <stdarg.h>
+# include <stdio.h>
 # define FT_PRINTF_H
 
 int	ft_printf_c(char c, int *count);

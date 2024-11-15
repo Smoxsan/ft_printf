@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:32:16 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/11 17:17:18 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/15 09:55:06 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 int	ft_printf_per(int *count)
 {
 	ft_printf_c('%', count);
-	return(0);
+	return (0);
 }

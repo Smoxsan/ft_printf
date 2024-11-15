@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:37:28 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/11 17:14:17 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/15 09:44:28 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_printf_d(int n, int *count)
 		ft_printf_d(n / 10, count);
 	}
 	ft_printf_c((n % 10) + '0', count);
-	return(0);
+	return (0);
 }
 
 // int main(void)
