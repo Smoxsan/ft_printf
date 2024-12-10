@@ -6,7 +6,7 @@
 /*   By: fkonig <fkonig@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 13:29:39 by fkonig            #+#    #+#             */
-/*   Updated: 2024/11/15 10:06:03 by fkonig           ###   ########.fr       */
+/*   Updated: 2024/11/15 13:36:52 by fkonig           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_printf_hexupper(unsigned long c, int *count)
 	hex_digits = "0123456789ABCDEF";
 	hex_length = hex_length - 1;
 	if (hex_return == NULL)
-		return (*count);
+		return (*count = -1);
 	if (c == 0)
 		hex_return[0] = '0';
 	while (c > 0)
